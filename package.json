@@ -4,25 +4,25 @@
   "version": "0.5.4",
   "main": "src/main.js",
   "description": "Unofficial desktop client for Microsoft Outlook",
-  "homepage": "https://github.com/julian-alarcon/prospect-mail",
+  "homepage": "https://github.com/sumonchai/bcc-mail",
   "keywords": [
     "Electron",
     "Outlook",
     "Microsoft",
     "Outlook Desktop",
-    "Prospect"
+    "bcc"
   ],
   "repository": {
     "type": "git",
-    "url": "git+ssh://github.com/julian-alarcon/prospect-mail"
+    "url": "git+ssh://github.com/sumonchai/bcc-mail"
   },
   "bugs": {
-    "url": "https://github.com/julian-alarcon/prospect-mail/issues"
+    "url": "https://github.com/sumonchai/bcc-mail/issues"
   },
   "author": {
     "name": "Julian Alarcon",
     "email": "alarconj@gmail.com",
-    "url": "https://github.com/julian-alarcon/"
+    "url": "https://github.com/sumonchai/bcc-mail/"
   },
   "license": "MIT",
   "engines": {
@@ -73,16 +73,16 @@
     "electron-builder": "^24.6"
   },
   "build": {
-    "appId": "io.github.julian-alarcon.prospect-mail",
+    "appId": "io.github.sumonchai.bcc-mail",
     "linux": {
       "category": "Email;Network;Office",
       "packageCategory": "net",
-      "executableName": "prospect-mail",
-      "synopsis": "Prospect Mail",
+      "executableName": "bcc-mail",
+      "synopsis": "BCC Mail",
       "desktop": {
-        "Name": "Prospect Mail",
+        "Name": "BCC Mail",
         "Comment": "Unofficial desktop client for Microsoft Outlook",
-        "StartupWMClass": "prospect-mail"
+        "StartupWMClass": "bcc-mail"
       },
       "target": [
         "AppImage",
@@ -103,7 +103,7 @@
       ]
     },
     "snap": {
-      "summary": "Prospect Mail",
+      "summary": "bcc Mail",
       "confinement": "strict",
       "grade": "stable",
       "base": "core22",
