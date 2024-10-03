@@ -34,8 +34,8 @@ jobs:
         with:
           node-version: 20
 
-      #- name: Install Snapcraft
-       # uses: samuelmeuli/action-snapcraft@v2
+      - name: Install Snapcraft
+        uses: samuelmeuli/action-snapcraft@v2
 
       - name: Install libarchive-tools for pacman build # Related https://github.com/electron-userland/electron-builder/issues/4181
         if: startsWith(matrix.os, 'ubuntu')
