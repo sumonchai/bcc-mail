@@ -1,6 +1,6 @@
 {
-  "name": "prospect-mail",
-  "productName": "Prospect Mail",
+  "name": "bcc-mail",
+  "productName": "BCC Mail",
   "version": "0.5.4",
   "main": "src/main.js",
   "description": "Unofficial desktop client for Microsoft Outlook",
