@@ -44,29 +44,29 @@ jobs:
       - name: Build
         run: yarn --link-duplicates --pure-lockfile
 
-      #- name: Build for test only linux
-      #  if: |
-      #    github.ref != 'refs/heads/main' &&
-       #   startsWith(matrix.os, 'ubuntu')
-       # run: yarn dist:linux:${{ matrix.arch }} -- --publish never
+      - name: Build for test only linux
+        if: |
+          github.ref != 'refs/heads/main' &&
+          startsWith(matrix.os, 'ubuntu')
+        run: yarn dist:linux:${{ matrix.arch }} -- --publish never
 
-      #- name: Release linux
-      #  if: |
-      #    github.ref == 'refs/heads/main' &&
-       #   startsWith(matrix.os, 'ubuntu')
-      #  run: yarn dist:linux:${{ matrix.arch }} -- --publish always
+      - name: Release linux
+        if: |
+          github.ref == 'refs/heads/main' &&
+          startsWith(matrix.os, 'ubuntu')
+        run: yarn dist:linux:${{ matrix.arch }} -- --publish always
 
-      #- name: Build for test only macos
-      #  if: |
-      #    github.ref != 'refs/heads/main' &&
-      #    startsWith(matrix.os, 'macos')
-      #  run: yarn dist:mac -- --publish never
+      - name: Build for test only macos
+        if: |
+          github.ref != 'refs/heads/main' &&
+          startsWith(matrix.os, 'macos')
+        run: yarn dist:mac -- --publish never
 
-      #- name: Release macos
-      #  if: |
-      #    github.ref == 'refs/heads/main' &&
-      #    startsWith(matrix.os, 'macos')
-      #  run: yarn dist:mac -- --publish always
+      - name: Release macos
+        if: |
+          github.ref == 'refs/heads/main' &&
+          startsWith(matrix.os, 'macos')
+        run: yarn dist:mac -- --publish always
 
       - name: Build for test only windows
         if: |
